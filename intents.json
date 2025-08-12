@@ -1,0 +1,955 @@
+[
+  {
+    "intent": "download_school_kit",
+    "patterns": [
+      "how can i download the kamp school kit",
+      "kamp school kit download",
+      "school kit download",
+      "download kamp brochure",
+      "download kamp documents",
+      "kamp syllabus download"
+    ],
+    "regex": "\\b(download|get)\\b.*\\b(kamp|school)\\b.*\\b(kit|brochure|documents|syllabus)\\b",
+    "response": "Schools can download the School Kit from the Downloads section. Please follow these steps:\n1. Visit KAMP website at www.kamp.org.in\n2. Navigate to the home page menu and click on 'Media Gallery.'\n3. Click on 'Downloads' to access the school kit which contains KAMP Brochure, CoE Brochure, CoE Membership Form, KAMP Implementation Guidelines, Syllabus, Student Registration Sheet for School, and Newsletter."
+  },
+  {
+    "intent": "eligibility_criteria",
+    "patterns": [
+      "what are the eligibility criteria for registering in kamp",
+      "kamp eligibility criteria",
+      "kamp registration eligibility",
+      "who can register in kamp",
+      "student eligibility for kamp",
+      "school eligibility for kamp"
+    ],
+    "regex": "\\b(eligibility|criteria|who can register|qualification)\\b.*\\b(kamp)\\b",
+    "response": "Schools from the following boards can register in KAMP- NASTA 2024:\n- Central Board of Secondary Education (CBSE)\n- Indian Certificate of Secondary Education (ICSE)\n- State Boards\n- International Boards\n- Eklavya Model Residential School (EMRS)\n- Uttar Pradesh Madhyamik Shiksha Parishad (UPMSP)\n- Jawahar Navodaya Vidyalaya (JNV)\n- Kendriya Vidyalaya Sangathan (KVS)\nEligibility Criteria for Students: All students from classes 3rd to 12th are eligible to register for KAMP - NASTA.\nFor registration, please visit https://www.kamp.org.in/student-registration-and-login."
+  },
+  {
+    "intent": "why_register_kamp",
+    "patterns": [
+      "why should i register for kamp",
+      "benefits of kamp registration",
+      "advantages of kamp",
+      "why join kamp",
+      "why participate in kamp",
+      "kamp benefits for school",
+      "kamp benefits for students"
+    ],
+    "regex": "\\b(why|benefits|advantages)\\b.*\\b(register|join|participate)\\b.*\\b(kamp)\\b",
+    "response": "Benefits and Outcomes for Schools registering in KAMP:\n- Schools can become part of the KAMP Centre of Excellence (CoE) and have the opportunity to establish Robotics and AI lab. (**T & C applied. Please see How to Apply for CoE in FAQ list).\n- Participate in various online workshops, CPD Program (Teacher’s Training) in various eminent CSIR Labs and other research organizations.\n- Foster scientific thinking and analytical skills among students, encouraging a deeper understanding of scientific concepts.\n- National recognition through awards and certificates.\n- Receive a detailed analysis of students' strengths and areas for improvement.\n- Access to sample papers and mock tests for thorough preparation.\n\nBenefits for Students in KAMP:\n- Receive a Student Assessment Report highlighting hidden talents/skills and providing improvement recommendations.\n- Awards and Certificates for outstanding achievers.\n- Engage in various activities for a year: online fortnightly workshops, scientific excursions to eminent CSIR labs, ISRO and other research organizations.\n- Participation in National Level events, workshops, and competitions.\n- Access to various knowledge resources by CSIR-NIScPR.\n- Opportunity to learn Robotics and AI as part of curriculum (**Applicable only for CoE nominated schools)."
+  },
+  {
+    "intent": "registration_process_and_fee",
+    "patterns": [
+      "how do i register for kamp",
+      "kamp registration process",
+      "registration fee for kamp",
+      "how to apply for kamp",
+      "kamp registration steps",
+      "student registration in kamp",
+      "school registration in kamp",
+      "how to enroll in kamp"
+    ],
+    "regex": "\\b(register|registration|apply|enroll)\\b.*\\b(kamp)\\b|\\bregistration fee\\b",
+    "response": "Registrations in KAMP occur only after the school is registered with KAMP. Once the school has completed its registration, students can register either individually or through their school.\n\nSchool Registrations:\n- Click on https://kamp.org.in/school-registration-and-login/cbse to register your school in KAMP.\n- Fill out the necessary details in the form and complete the school registration.\n**Note: If your school is already registered with KAMP, please do not register again.**\n\nStudent Registrations:\n- Bulk Registration: Schools can bulk register through the login portal by uploading the student data through an excel file provided in the login.\n- Individual Registration: Schools can share the individual registration link with students for direct registration on KAMP. The direct registration link is available on the dashboard under the school login.\n- Self-Registration: Students can go to https://kamp.org.in/student-registration-and-login select their state, city, and school name, fill out the necessary information, pay the fees, and complete the enrollment.\n\nRegistration Fee:\n- Rs. 400/- per student (for Self-Financed Schools)\n- Rs. 400/- per student (for Kendriya Vidyalaya and Jawahar Navodaya Vidyalaya)"
+  },
+  {
+    "intent": "login_details_after_registration",
+    "patterns": [
+      "how will i receive my login details after registration",
+      "kamp login details",
+      "school login credentials",
+      "student login credentials",
+      "username and password after registration",
+      "how to get login info",
+      "how to get enrollment number"
+    ],
+    "regex": "\\b(login|username|password|credentials|enrollment number)\\b.*\\b(after|post)\\b.*\\b(registration|register)\\b",
+    "response": "School Login Details:\n- The username and password for the school portal will be sent to the registered email address and mobile number after registration.\n\nStudent Login Details:\n- Once the school completes the student registration, a list of enrollment numbers is made available in the school portal. The school is requested to share the login details (enrollment number and date of birth) with the registered students.\n- If a student registers directly through the website or provided link, the enrollment number will be sent via SMS, WhatsApp, or email to the details provided during registration."
+  },
+  {
+    "intent": "payment_deducted_no_enrollment",
+    "patterns": [
+      "payment deducted but no enrollment number",
+      "money deducted but no enrollment",
+      "paid but did not receive enrollment number",
+      "payment successful but no login",
+      "transaction done but no enrollment number",
+      "fee paid but enrollment not received"
+    ],
+    "regex": "\\b(payment|money|fee|transaction)\\b.*\\b(deducted|paid|successful)\\b.*\\b(no|not).*\\b(enrollment|login)\\b",
+    "response": "If your payment was deducted but you did not receive your enrollment number, please contact us at:\nPhone: (+91) 9599576228, (+91) 9289359694\nWhatsApp: (+91) 9717435123\nEmail: info@kamp.org.in\n\nWhen contacting, please include the following details:\n- Student's name\n- Father's name\n- Registered mobile number\n- School name\n- State\n- Payment mode with transaction ID / Screenshot of payment / Screenshot of bank statement\n\nOur team will get back to you promptly and send you the enrollment number. Make sure to share all necessary details to expedite the process."
+  },
+  {
+    "intent": "double_payment_issue",
+    "patterns": [
+      "registration fee deducted twice",
+      "double payment for kamp registration",
+      "duplicate transaction in kamp",
+      "money deducted two times",
+      "payment charged twice",
+      "registration fee charged twice but confirmation for one"
+    ],
+    "regex": "\\b(payment|fee|transaction|money)\\b.*\\b(twice|double|duplicate|two times)\\b.*\\b(kamp|registration)\\b",
+    "response": "If the registration fee was deducted twice from your bank account but you received confirmation for only one transaction, please contact us at:\nPhone: (+91) 9599576228, (+91) 9289359694\nWhatsApp: (+91) 9717435123\nEmail: info@kamp.org.in\n\nPlease provide the following information via email:\n- Payment mode with transaction ID / Screenshot of payment / Screenshot of bank statement\n- Student's name\n- Registered mobile number\n- Account beneficiary name (from which account the payment was made)\n\nWithin 24 to 48 hours, we will initiate the refund process for the duplicate payment back to your original account. The payment will be reflected within 7-10 working days after initiation, and the refund details will be provided by the KAMP support team."
+  },
+  {
+    "intent": "international_schools_participation",
+    "patterns": [
+      "can schools outside india participate in kamp",
+      "international schools in kamp",
+      "students abroad register for kamp",
+      "overseas students in kamp",
+      "kamp participation from other countries",
+      "foreign school registration in kamp"
+    ],
+    "regex": "\\b(international|overseas|foreign|outside india|abroad)\\b.*\\b(school|student)\\b.*\\b(kamp)\\b",
+    "response": "Yes, schools outside India can participate in KAMP. We welcome international schools to join and benefit from our program.\n\nTo initiate the registration process, please share the following school details along with the school board information with us at projectdirector@kamp.org.in. We will contact the school to inform them about the registration process.\n\nRequired Details:\n- Country\n- City\n- School Name\n- School Address\n- Principal's Name\n- Principal's Email Address\n- Principal's Phone\n- Nodal Officer (SPOC) Name\n- Nodal Officer's Email Address\n- Nodal Officer's Phone\n- Number of students from classes 3rd - 12th\n- School Board\n\nContact Details:\nEmail: info@kamp.org.in\nPhone: (+91) 9599576228, (+91) 9289359694\nWhatsApp: (+91) 9717435123"
+  },
+  {
+    "intent": "annual_registration_requirement",
+    "patterns": [
+      "do i need to register for kamp every year",
+      "annual registration for kamp",
+      "kamp yearly registration",
+      "register again for kamp next year",
+      "repeat registration for kamp",
+      "do schools register every year in kamp",
+      "do students register every year in kamp"
+    ],
+    "regex": "\\b(every year|annual|yearly|again|repeat)\\b.*\\b(register|registration)\\b.*\\b(kamp)\\b",
+    "response": "Schools do not need to register every year. Once registered, schools remain enrolled in the KAMP program.\n\nStudents must register each year to participate in KAMP.\n\nThis ensures that each year's participants are accurately recorded and receive the necessary materials and support."
+  },
+  {
+    "intent": "retrieve_login_details",
+    "patterns": [
+      "how can i retrieve my login details if i forget them",
+      "forgot kamp login",
+      "forgot kamp password",
+      "forgot username for kamp",
+      "forgot enrollment number",
+      "how to recover kamp login",
+      "reset kamp password"
+    ],
+    "regex": "\\b(forgot|forget|lost|recover|retrieve|reset)\\b.*\\b(login|username|password|enrolment|enrollment)\\b.*\\b(kamp)\\b",
+    "response": "If you forget your login details, you can retrieve them by following these steps:\n1. Visit the KAMP School/Student Login Page.\n2. Click on 'Forgot Password'.\n   - For School: Click on 'Forget Username/Forget Password'.\n   - For Students: Click on 'Forget Enrolment No'.\n3. Follow the instructions.\n4. Fill in the appropriate information shown during the retrieval process.\n5. Your login credentials will be shared on the registered mobile number and email.\n\n**Note:** Students can also get the Enrolment Number from the School, which can be downloaded by the school from their portal.\n\nIf you encounter any issues or need further assistance, please contact KAMP support at:\nEmail: info@kamp.org.in\nPhone: (+91) 9599576228, (+91) 9289359694\nWhatsApp: (+91) 9717435123\n\nOur support team will help you recover your login credentials."
+  },
+  {
+    "intent": "nasta_preparation_tips",
+    "patterns": [
+      "how should i prepare for nasta",
+      "nasta preparation tips",
+      "how to study for nasta",
+      "nasta exam preparation",
+      "best way to prepare for nasta",
+      "nasta study guide"
+    ],
+    "regex": "\\b(prepare|preparation|study|tips|guide)\\b.*\\b(nasta)\\b",
+    "response": "There is no need for extra preparation for the NASTA Assessment, as the questions are based on the syllabus you are already studying in your classes.\n\nPreparation Tips:\n- **Study Regularly:** Continue with your regular studies and focus on understanding the concepts taught in your classes.\n- **Practice with Sample Papers:** KAMP provides sample papers to help you practice and get familiar with the types of questions that will be asked in the assessment.\n- **Take the Mock Test:** One month prior to the assessment, a mock test will be available. This will help you understand the assessment pattern and improve your time management skills.\n\nBy staying consistent with your studies and utilizing the resources provided by KAMP, you will be well-prepared for the NASTA Assessment."
+  },
+  {
+    "intent": "online_mock_test_info",
+    "patterns": [
+      "how can i take the online mock test",
+      "mock test for kamp",
+      "nasta online mock test",
+      "can i take mock test if my school chose offline mode",
+      "kamp mock test details",
+      "mock test enrollment process"
+    ],
+    "regex": "\\b(mock test)\\b.*\\b(online)\\b|\\b(offline mode).*\\b(mock test)\\b",
+    "response": "The online mock test will be available on the KAMP website one month prior to the assessment. All students can participate in the mock test by using their enrollment number and date of birth (DOB).\n\nEven if your school has chosen the offline mode for NASTA, you are still eligible to take the online mock test."
+  },
+  {
+    "intent": "nasta_exam_date",
+    "patterns": [
+      "what is the exam date for kamp nasta",
+      "nasta 2024 exam date",
+      "kamp exam schedule",
+      "nasta test date",
+      "when is the nasta exam",
+      "date of kamp exam"
+    ],
+    "regex": "\\b(date|schedule|when)\\b.*\\b(nasta|kamp exam|test)\\b",
+    "response": "The tentative date for NASTA 2024 is 7th December 2024."
+  },
+  {
+    "intent": "nasta_syllabus_info",
+    "patterns": [
+      "what is the syllabus for kamp nasta",
+      "nasta exam syllabus",
+      "kamp syllabus download",
+      "syllabus for nasta 2024",
+      "nasta syllabus for class 3 to 12",
+      "kamp test syllabus"
+    ],
+    "regex": "\\b(syllabus)\\b.*\\b(nasta|kamp)\\b",
+    "response": "The syllabus for KAMP - NASTA for classes 3rd to 12th is available on the KAMP website. You can find it in the 'Downloads' section of the website.\n\nThe syllabus is also available under the school and student login portals."
+  },
+  {
+    "intent": "nasta_sample_papers_download",
+    "patterns": [
+      "where can i download sample papers for the nasta assessment",
+      "nasta sample papers",
+      "kamp sample question papers",
+      "practice papers for nasta",
+      "download nasta question paper",
+      "nasta model papers"
+    ],
+    "regex": "\\b(sample|practice|model)\\b.*\\b(paper|question)\\b.*\\b(nasta|kamp)\\b",
+    "response": "You can download sample papers for classes 3rd to 12th from the KAMP website.\n\nHere’s how:\n1. **Login to the School and Student Portal:**\n   - **For Students:** Visit Student Portal and log in using your enrollment number and date of birth (DOB).\n   - **For Schools:** Visit School Portal and log in using the User ID and Password.\n2. **Download Sample Papers:**\n   Once logged in, you can access and download the sample papers directly from the portal. These sample papers are designed to help you prepare effectively for the NASTA assessment."
+  },
+  {
+    "intent": "nasta_assessment_language",
+    "patterns": [
+      "in which language will the nasta assessment be conducted",
+      "nasta exam language",
+      "language options for kamp nasta",
+      "nasta assessment in hindi",
+      "nasta test language medium",
+      "language of kamp exam"
+    ],
+    "regex": "\\b(language|medium)\\b.*\\b(nasta|kamp)\\b",
+    "response": "The NASTA assessment is conducted in English for CBSE, KV, and JNV schools. However, for government schools, assessments can be provided in regional languages upon request directly from the department. This facility may be exclusively available for government schools that request it."
+  },
+  {
+    "intent": "nasta_assessment_mode",
+    "patterns": [
+      "how can i find out the mode of the nasta assessment",
+      "nasta assessment mode",
+      "online or offline nasta",
+      "kamp nasta exam mode",
+      "how to check nasta mode",
+      "nasta test format"
+    ],
+    "regex": "\\b(mode|format|online|offline)\\b.*\\b(nasta|kamp exam|assessment)\\b",
+    "response": "To determine the mode of the NASTA assessment, follow these steps:\n\n**Contact Your School:**\n- The mode of assessment (online or offline) will be selected by your school.\n- Your school will inform you about the mode of assessment they have chosen.\n\nBy contacting your school, you can clarify and confirm the mode of assessment for the NASTA exam. This ensures that you are prepared accordingly for the assessment. Subsequently, you can also contact the KAMP support team to verify the mode of assessment in your school."
+  },
+  {
+    "intent": "offline_exam_materials_delivery",
+    "patterns": [
+      "when will we receive the exam materials if the assessment is conducted offline",
+      "offline exam materials delivery",
+      "when will we get nasta papers",
+      "exam materials for offline nasta",
+      "when will offline exam kit arrive",
+      "nasta question papers delivery date"
+    ],
+    "regex": "\\b(exam|question|materials|papers|kit)\\b.*\\b(offline|delivery|receive|get)\\b.*\\b(nasta|kamp)\\b",
+    "response": "If the assessment is conducted offline, the exam materials will be sent to the schools approximately 3 to 4 days before the assessment date. Schools are requested not to open the materials before the assessment day. The materials should be opened and distributed to students only on the day of the assessment to ensure the integrity and fairness of the process."
+  },
+  {
+    "intent": "nasta_online_requirements",
+    "patterns": [
+      "what are the requirements for conducting nasta online in schools",
+      "online nasta requirements",
+      "nasta online exam setup",
+      "conducting kamp nasta online",
+      "equipment needed for online nasta",
+      "nasta online infrastructure"
+    ],
+    "regex": "\\b(requirements|setup|equipment|infrastructure)\\b.*\\b(online)\\b.*\\b(nasta|kamp)\\b",
+    "response": "To conduct NASTA online in schools, the following requirements must be met:\n- All students must take the online exam from the school premises using laptops / desktop / tablets.\n- Ensure that there are enough devices for all students, and that these devices are in good working condition with the necessary software installed.\n- Maintain reliable internet connectivity throughout the duration of the assessment to prevent any disruptions.\n- Provide a secure and quiet environment for students to take the online assessment without distractions.\n- Have technical support available during the assessment to address any issues that may arise with devices, connectivity, or software.\n- Schools should have access to and be familiar with the designated online assessment platform provided by KAMP. Ensure familiarity with the platform's features and functionalities.\n- Ensure accurate attendance of students on the day of the assessment."
+  },
+  {
+    "intent": "nasta_exam_center",
+    "patterns": [
+      "where is my exam center for the nasta assessment",
+      "nasta exam center",
+      "kamp nasta test location",
+      "nasta exam venue",
+      "where will i take the nasta exam",
+      "nasta assessment place"
+    ],
+    "regex": "\\b(center|venue|location|place)\\b.*\\b(nasta|kamp exam|assessment|test)\\b",
+    "response": "Your exam center for the NASTA assessment will be your respective school premises. All students will take the assessment at their school under the supervision of school authorities. Please ensure you are present at your school on the designated assessment day as per the schedule provided by your school administration."
+  },
+  {
+    "intent": "nasta_results_and_achievers",
+    "patterns": [
+      "how can i view the results and achievers of nasta",
+      "nasta results",
+      "kamp nasta achievers",
+      "nasta exam toppers",
+      "nasta winners list",
+      "where to see nasta results"
+    ],
+    "regex": "\\b(results|achievers|toppers|winners|list)\\b.*\\b(nasta|kamp)\\b",
+    "response": "For Schools and Students:\nThe results of NASTA can be viewed through the student and school login portals. The achievers of NASTA will also be listed on the KAMP website. You can find this information on the homepage under the 'Results' menu."
+  },
+  {
+    "intent": "nasta_awards_and_certificates",
+    "patterns": [
+      "when will i receive my award and certificate",
+      "nasta award delivery date",
+      "nasta certificate download",
+      "when will i get my medal",
+      "kamp nasta prize dispatch",
+      "award and certificate timeline"
+    ],
+    "regex": "\\b(award|certificate|medal|prize)\\b.*\\b(receive|get|delivery|dispatch|download)\\b.*\\b(nasta|kamp)\\b",
+    "response": "Awards and certificates for NASTA achievers are dispatched in the month of April. Participants can download their e-certificates through the school/student login portal using their login credentials. This allows achievers to access their certificates promptly. Mementoes/Medals/Certificates will be sent out to the schools accordingly in March - April."
+  },
+  {
+    "intent": "kamp_pratibhaotsav_date",
+    "patterns": [
+      "when will the kamp pratibhaotsav annual award ceremony be held",
+      "kamp pratibhaotsav date",
+      "annual award ceremony schedule",
+      "kamp award function date",
+      "when is kamp annual event",
+      "kamp awards ceremony timing"
+    ],
+    "regex": "\\b(pratibhaotsav|annual award|award ceremony|function|event)\\b.*\\b(date|schedule|when|timing)\\b",
+    "response": "The KAMP Pratibhaotsav, the Annual Award Ceremony, will tentatively be organized in the month of September. Please stay tuned for further announcements and updates regarding the exact date and details of the ceremony."
+  },
+  {
+    "intent": "learning_environment_survey",
+    "patterns": [
+      "what is the learning environment survey and how do i complete it",
+      "kamp les form",
+      "learning environment survey details",
+      "how to fill les form",
+      "les survey link",
+      "kamp les information"
+    ],
+    "regex": "\\b(learning environment survey|les)\\b.*\\b(what|how|fill|complete|link|form)\\b",
+    "response": "The Learning Environment Survey (LES) captures student learning in different environments. Its insights inform policymakers and schools for improved decision-making and educational strategies.\n- School LES Link: Click here https://kamp.org.in/schoollesform to complete the survey by providing detailed information about your school's learning environment and infrastructure.\n- Students LES Link: Click here https://kamp.org.in/lesform to complete the survey based on your learning experience and environment."
+  },
+  {
+    "intent": "coe_vs_non_coe_schools",
+    "patterns": [
+      "what is the difference between a coe school and a non coe school registered under kamp",
+      "coe school benefits",
+      "non coe school benefits",
+      "coe vs non coe schools",
+      "difference between coe and non coe",
+      "features of coe schools"
+    ],
+    "regex": "\\b(coe|centre of excellence)\\b.*\\b(vs|difference|benefits|features)\\b",
+    "response": "Registered CoE schools have access to a variety of post-NASTA activities, including:\n- AI Coding & Robotics Lab Installation\n- Fortnightly Online Workshops\n- Scientific Excursions For Students (Visits to ISRO & CSIR Labs)\n- Continuous Professional Development Program for Teachers\n- Annual Events & Competition\n\nNon-registered schools have access to:\n- Fortnightly Workshops (For all the registered students from classes 3rd to 12th.)\n- Scientific Excursion (The school can nominate up to 5 students for the planned visit.) **This excursion is subject to seat availability."
+  },
+  {
+    "intent": "coe_school_nomination",
+    "patterns": [
+      "how can i nominate my school under coe",
+      "apply for coe membership",
+      "how to become a coe school",
+      "nomination process for coe",
+      "register school for coe",
+      "coe membership application"
+    ],
+    "regex": "\\b(nominate|apply|register)\\b.*\\b(coe|centre of excellence)\\b.*\\b(school|membership)\\b",
+    "response": "To nominate your school for Centre of Excellence (CoE) with KAMP, please follow these steps:\n\n1. Register all students of your school from classes 3rd to 12th on the KAMP platform.\n2. Infrastructure Requirements:\n   - Ensure the school has a designated classroom or computer lab.\n   - Arrange necessary infrastructure, including furniture and IT equipment such as computers/laptops, projectors, or monitor screens.\n3. Complete CoE Membership Form: Fill out the CoE Membership Form for Schools with all required details.\n4. Principal's Authorization: The principal should sign the completed form and affix the school stamp for authentication.\n5. Submit the Form: Email the completed CoE Membership Form to coe@kamp.org.in.\n\nFollowing these steps ensures that your school's nomination for CoE Membership is processed smoothly and efficiently. For any further assistance or queries, please contact us at the provided email address."
+  },
+  {
+    "intent": "coe_activities",
+    "patterns": [
+      "what activities are included under the centre of excellence",
+      "coe activities list",
+      "what does coe include",
+      "centre of excellence programs",
+      "coe school activities",
+      "activities in coe"
+    ],
+    "regex": "\\b(coe|centre of excellence)\\b.*\\b(activities|programs|include|offers)\\b",
+    "response": "The Centre of Excellence (CoE) is a range of activities designed to enhance students' scientific and analytical skills. These activities include:\n- Robotics and AI Labs: Establishment of Robotics and Artificial Intelligence (AI) labs within the school premises for hands-on learning and innovation.\n- Fortnightly Online Workshops: Workshops/sessions conducted by experts in various fields of science, technology, innovation, and academic development on Thursday at 4.00 pm.\n- Competitions and Challenges: Participation in national and international competitions and challenges to foster a spirit of innovation and competitiveness.\n- Scientific Excursions: Opportunities to visit prestigious research labs and institutions like CSIR labs, ISRO, and other scientific organizations.\n- Continuous Professional Development (CPD) for Teachers: Regular CPD programs for teachers to enhance their teaching skills and stay updated with the latest educational trends.\n- Access to Knowledge Resources: Availability of a wide range of knowledge resources, including research papers, articles, and study materials.\n- NASTA Assessment: Comprehensive assessment reports and feedback to help students identify their strengths and areas for improvement.\n\nBy engaging in these activities, students and teachers can significantly enhance their scientific knowledge and practical skills, fostering a conducive environment for innovation and excellence in education."
+  },
+  {
+    "intent": "coe_partial_eligibility",
+    "patterns": [
+      "i wish to register all the students from classes 3rd to 12th in kamp but still the terms of coe are not met can my school still be eligible",
+      "eligible for coe without meeting all requirements",
+      "coe eligibility if terms not met",
+      "register all students but coe requirements missing",
+      "partial eligibility for coe program"
+    ],
+    "regex": "\\b(coe|centre of excellence)\\b.*\\b(eligible|eligibility|terms not met|requirements missing)\\b",
+    "response": "If your school wishes to register all students from classes 3rd to 12th in KAMP but does not fully meet the terms of the Centre of Excellence (CoE) program, it may still be possible to become eligible. Here's how:\n\n- Ensure that all students from classes 3rd to 12th are registered on the KAMP platform.\n- Make efforts to upgrade or enhance the necessary facilities to meet the CoE requirements.\n- Communicate your school’s intent and commitment to fulfilling the CoE requirements in the near future. Highlight any ongoing efforts or plans to improve the infrastructure.\n\nFor assistance or to discuss your school’s eligibility and plans for meeting the CoE terms, please contact KAMP at:\n- Email: coe@kamp.org.in\n- Phone: (+91) 9599576228, (+91) 9289359694\n\nWhile your school may not currently meet all the terms of the CoE program, demonstrating a strong commitment and clear plan for future compliance can help your school become eligible for nomination. Contact KAMP for further guidance and support in this process."
+  },
+  {
+    "intent": "coe_lab_installation_timeline",
+    "patterns": [
+      "after making the payment when will the lab be installed at our school",
+      "when will the ai lab be installed",
+      "timeline for robotics lab installation",
+      "how long for lab setup after payment",
+      "ai lab setup process after payment"
+    ],
+    "regex": "\\b(lab|robotics|ai)\\b.*\\b(install|installation|setup)\\b.*\\b(payment|after)\\b",
+    "response": "Upon reaching 75% of the required registrations and payments, KAMP will commence the establishment process for the Robotics & AI Lab at the school. The Robotics kit will be dispatched within 30 days. Upon achieving 100% registration, KAMP will proceed with lab installation and teacher training."
+  },
+  {
+    "intent": "coe_lab_additional_fees",
+    "patterns": [
+      "does the school have to pay any additional fees for the ai robotics lab",
+      "is there any extra cost for ai lab",
+      "do we need to pay for robotics lab installation",
+      "additional charges for ai lab",
+      "extra payment for coe robotics lab"
+    ],
+    "regex": "\\b(ai|robotics|lab)\\b.*\\b(additional|extra|charges|fees|cost|payment)\\b",
+    "response": "No, the school does not have to pay any additional fees for the installation of AI Robotics Lab. The installation of the AI Robotics Lab is part of the benefits provided under the Centre of Excellence (CoE) program by KAMP. If your school is nominated and meets the necessary requirements, the lab will be installed at no extra cost to the school."
+  },
+  {
+    "intent": "coe_signage_board",
+    "patterns": [
+      "how will i get the coe signage board for my school",
+      "how to get coe board",
+      "coe signage process",
+      "board for coe school",
+      "how to receive coe signage"
+    ],
+    "regex": "\\b(coe|centre of excellence)\\b.*\\b(signage|board)\\b.*\\b(get|receive|process)\\b",
+    "response": "The assigned Relationship Manager will provide a digital sample featuring the School Name and logo, demonstrating how the board will appear. The school can then proceed to have it printed. Additionally, the CoE board guidelines PDF will be shared with the Principal or Nodal Officer."
+  },
+  {
+    "intent": "coe_lab_components",
+    "patterns": [
+      "what are the components of ai and robotics lab",
+      "components of ai lab",
+      "robotics lab items list",
+      "ai lab equipment",
+      "schedule demo session for ai robotics lab"
+    ],
+    "regex": "\\b(ai|robotics)\\b.*\\b(lab|laboratory)\\b.*\\b(components|items|equipment|demo)\\b",
+    "response": "To know the components and schedule a demo session of the AI & Robotics Lab in your school, kindly reach us at:\n- Email: coe@kamp.org.in\n- Phone: (+91) 9599576228, (+91) 9289359694"
+  },
+  {
+    "intent": "coe_lab_missing_components",
+    "patterns": [
+      "there are some components missing in ai and robotics material received what should i do",
+      "missing components in ai lab kit",
+      "robotics kit items not received",
+      "incomplete ai robotics kit",
+      "ai lab missing items"
+    ],
+    "regex": "\\b(ai|robotics)\\b.*\\b(kit|lab|material)\\b.*\\b(missing|incomplete|not received|components)\\b",
+    "response": "If you find that any components are missing from your Robotics and AI Kit, please contact us at +91 8130388123 or your assigned KAMP relationship manager.\nYou need to provide your school information and the missing components during the call:\n- Your school name\n- Contact person’s name\n- List of missing components\n- Any other relevant information\nThe concerned person will assist you in resolving the issue and provide further instructions."
+  },
+  {
+    "intent": "coe_lab_extra_consumables",
+    "patterns": [
+      "i need extra consumables for my ai and robotics lab how to place the order",
+      "order extra items for ai lab",
+      "buy more consumables for robotics lab",
+      "how to get extra ai lab materials",
+      "request additional consumables for robotics lab"
+    ],
+    "regex": "\\b(ai|robotics)\\b.*\\b(lab)\\b.*\\b(extra|additional|more)\\b.*\\b(consumables|items|materials|order)\\b",
+    "response": "If your school needs extra consumables for the Robotics & AI Lab, you can place an order by following these steps:\n- List the details of the extra consumables needed, including quantities and any specific requirements.\n- Address your email to shambhavi@kamp.org.in\n- Include the list of required consumables in the email body.\n- Provide your school name and contact information for reference\n- After sending the email, please wait for a confirmation response with further instructions or details about your order."
+  },
+  {
+    "intent": "coe_lab_malfunctioning_components",
+    "patterns": [
+      "some components of robotics and ai lab are malfunctioning what should i do",
+      "robotics lab items not working",
+      "faulty ai lab equipment",
+      "malfunctioning robotics kit",
+      "ai lab devices not functioning"
+    ],
+    "regex": "\\b(ai|robotics)\\b.*\\b(lab|kit|equipment)\\b.*\\b(malfunctioning|faulty|not working|not functioning)\\b",
+    "response": "If any components of your Robotics & AI Lab are malfunctioning, you can directly register your complaint at shambhavi@kamp.org.in or contact us at +91 8130388123 including the list of malfunctioning components and a detailed description of the issues. Provide your school name and contact information for reference.\nAfter registering your complaint, KAMP relationship manager will assist you with the desired assistance."
+  },
+  {
+    "intent": "coe_lab_purchase_requirement",
+    "patterns": [
+      "do we need to purchase anything for the ai and robotics lab",
+      "buy items for ai lab",
+      "purchase robotics lab equipment",
+      "do we have to purchase for coe lab",
+      "need to buy for ai robotics lab"
+    ],
+    "regex": "\\b(ai|robotics)\\b.*\\b(lab)\\b.*\\b(purchase|buy|requirement)\\b",
+    "response": "No, the school does not have to purchase anything for the Robotics & AI Lab. The infrastructure requirements should be met by the school before applying for the CoE program."
+  },
+  {
+    "intent": "coe_lab_install_now_pay_later",
+    "patterns": [
+      "can we get the ai lab installed now and pay later",
+      "install robotics lab before payment",
+      "set up ai lab now pay later",
+      "ai lab early installation before payment",
+      "install lab without full payment"
+    ],
+    "regex": "\\b(ai|robotics)\\b.*\\b(lab)\\b.*\\b(install|setup|set up)\\b.*\\b(pay later|without payment|before payment)\\b",
+    "response": "According to the Centre of Excellence (CoE) guidelines, KAMP will initiate the setup of the Robotics & AI Lab once 75% of the required registrations and payments are received. The lab will be fully installed, and teacher training will be provided upon reaching 100% of the required registrations and payment completion.\nFor more information kindly reach us at:\n- Email: coe@kamp.org.in\n- Phone: (+91) 9599576228, (+91) 9289359694"
+  },
+  {
+    "intent": "coe_lab_half_payment_installation",
+    "patterns": [
+      "we have made half payment can we still get the robotics and ai lab installed",
+      "partial payment ai lab installation",
+      "half fees paid robotics lab setup",
+      "install ai lab after 50 percent payment",
+      "can we get robotics lab with partial payment"
+    ],
+    "regex": "\\b(ai|robotics)\\b.*\\b(lab)\\b.*\\b(half|partial|50)\\b.*\\b(payment|fees)\\b",
+    "response": "The setup of the Robotics & AI Lab begins once 75% of the required registrations and fees are completed. Necessary hardware and robotics kits are delivered after 75% of the fees are realized. The full installation of the lab and teacher training will commence upon reaching 100% of the required registrations and fees."
+  },
+  {
+    "intent": "coe_lab_teacher_training_requirement",
+    "patterns": [
+      "how many teachers are required for ai lab teacher training",
+      "teachers needed for robotics lab training",
+      "number of facilitators for ai lab",
+      "teacher requirement for ai lab",
+      "do we need more than one teacher for robotics lab"
+    ],
+    "regex": "\\b(ai|robotics)\\b.*\\b(lab)\\b.*\\b(teacher|facilitator)\\b.*\\b(require|need|number)\\b",
+    "response": "The school must assign at least one dedicated teacher or facilitator to manage and implement student activities within the Robotics & AI Lab. This teacher will be responsible for overseeing the lab, guiding students through projects, and ensuring the proper use and maintenance of the equipment. Additionally, having more than one teacher trained can be beneficial to ensure continuous support and smooth operation of the lab activities. Assigning a dedicated team of teachers will help maximize the benefits of the lab and provide a robust learning environment for the students."
+  },
+  {
+    "intent": "coe_lab_hiring_requirement",
+    "patterns": [
+      "do we need to hire a new person for the ai lab",
+      "is our current computer teacher sufficient for ai lab",
+      "need new staff for robotics lab",
+      "can current teacher manage ai lab",
+      "hiring requirement for ai robotics lab"
+    ],
+    "regex": "\\b(ai|robotics)\\b.*\\b(lab)\\b.*\\b(hire|new staff|teacher|person)\\b",
+    "response": "The decision is up to the school. If you already have a computer teacher capable of overseeing the activities in the Robotics & AI Lab, they can generally manage the lab effectively. However, if you do not have a suitable facilitator with the necessary skills and experience, you may consider hiring a new person specifically for this role. Ensuring the lab is supervised by someone with appropriate knowledge and expertise is crucial for the successful implementation and operation of lab activities."
+  },
+  {
+    "intent": "coe_lab_multiple_teachers_training",
+    "patterns": [
+      "can all school teachers attend the ai lab teacher training",
+      "are multiple teachers allowed for robotics lab training",
+      "more than one teacher in ai lab training",
+      "can extra teachers join ai lab training",
+      "allow all teachers for robotics training"
+    ],
+    "regex": "\\b(ai|robotics)\\b.*\\b(lab)\\b.*\\b(teacher|teachers)\\b.*\\b(training|attend|join|allowed)\\b",
+    "response": "The decision is up to the school. Generally, the teacher assigned to oversee the Robotics & AI Lab activities is required to attend the training. This ensures they gain comprehensive knowledge of the lab and can effectively assist the students. However, schools are welcome to have additional teachers attend the training to broaden their understanding and potentially integrate AI concepts into their teaching practices."
+  },
+  {
+    "intent": "coe_lab_vs_atal_lab",
+    "patterns": [
+      "how is the ai and robotics lab different from the atal lab",
+      "difference between atal lab and ai robotics lab",
+      "can we have both atal lab and ai robotics lab installed together",
+      "atal lab vs ai robotics lab",
+      "install both ai robotics lab and atal lab"
+    ],
+    "regex": "\\b(ai|robotics)\\b.*\\b(lab)\\b.*(atal)\\b|\\batal\\b.*\\b(ai|robotics)\\b.*\\b(lab)\\b",
+    "response": "Yes, you can have both the ATAL Lab and the AI & Robotics Lab installed together. The Robotics & AI Lab is designed in accordance with the New Education Policy 2022, which mandates the introduction of artificial intelligence, coding, and analytical thinking in schools to promote skill education from the schooling level. This lab focuses on modern technologies and skills, complementing the ATAL Lab's existing offerings. Having both labs installed together will enhance your school's capability to provide comprehensive education in both traditional and modern technological skills."
+  },
+  {
+    "intent": "coe_lab_textbook_lms",
+    "patterns": [
+      "will we receive any textbook for the ai and robotics lab",
+      "is there a book for ai robotics lab",
+      "do we get study material for robotics lab",
+      "curriculum for ai robotics lab",
+      "learning resources for ai robotics lab"
+    ],
+    "regex": "\\b(ai|robotics)\\b.*\\b(lab)\\b.*(textbook|book|curriculum|material|resources|lms)\\b",
+    "response": "We provide a Learning Management System (LMS) for completing the curriculum of Robotics & AI Lab. The LMS contains class-wise sessions and a detailed curriculum, making it easy for both teachers and students to access and learn from. This ensures that all necessary materials are readily available online."
+  },
+  {
+    "intent": "coe_annual_robotics_event",
+    "patterns": [
+      "how to participate in annual robotics event",
+      "how can we join annual robotics event",
+      "participation process for annual robotics competition",
+      "join robotics event",
+      "robotics annual event registration"
+    ],
+    "regex": "\\b(robotics)\\b.*\\b(annual|event|competition|participate|registration|join)\\b",
+    "response": "To participate in the Annual Robotics event, schools and students will receive communication via email and WhatsApp. Students interested in participating should inform their school. The school will then coordinate with us by sharing the necessary enrollment details."
+  },
+  {
+    "intent": "coe_teacher_training_certificate",
+    "patterns": [
+      "is there any certificate provided to the teacher after ai and robotics training",
+      "will teacher get certificate after robotics training",
+      "certificate for ai robotics training",
+      "teacher training certificate",
+      "will teacher receive e certificate after training"
+    ],
+    "regex": "\\b(teacher)\\b.*\\b(training)\\b.*\\b(certificate|e-?certificate)\\b",
+    "response": "Yes, teachers may receive an e-certificate upon completion of the AI & Robotics training."
+  },
+  {
+    "intent": "participate_online_workshops",
+    "patterns": [
+      "how to participate in online workshops",
+      "how to join online workshops",
+      "online workshop participation process",
+      "join fortnightly workshop",
+      "how can i attend online workshop"
+    ],
+    "regex": "\\b(online|fortnightly)\\b.*\\b(workshop|session|join|participate|attend)\\b",
+    "response": "To participate in the online fortnightly workshops, follow these steps:\n  Visit the KAMP website https://kamp.org.in/student-registration-and-login\n  Use your KAMP enrolment number and date of birth (DOB) to log in to your account.\n  Once logged in, you will find the joining link for the online workshops available in your student portal on the dashboard.\n  The workshops are held every fortnightly Thursday at 4:00 PM. Use the link provided in your portal to join the session.\nBy following these steps, you can easily participate in the online fortnightly workshops and benefit from the valuable knowledge and insights shared during these sessions.\nNote: The joining links of each fortnightly workshop is shared with the School’s Registered number under KAMP on WhatsApp and email. The schools are requested to share the links and motivate the registered students to participate in all the Online Fortnightly Workshops held Thursdays at 4:00 pm. Please see the schedule of Workshops under “Important Dates” on KAMP website."
+  },
+  {
+    "intent": "workshop_eligibility_and_registration",
+    "patterns": [
+      "who can attend workshops",
+      "workshop eligibility",
+      "do students need to register for workshops",
+      "who is allowed to join workshop",
+      "who can join online workshop"
+    ],
+    "regex": "\\b(workshop|session)\\b.*\\b(who|eligibility|register|registration|join|attend)\\b",
+    "response": "Students from classes 3rd to 12th who are registered under KAMP, can participate in the online workshops without needing to register separately. They can access the workshops through their login portal using their KAMP enrolment number and date of birth. This allows for easy participation in the sessions held every Thursday at 4:00 PM."
+  },
+  {
+    "intent": "workshop_attendance_parents_teachers",
+    "patterns": [
+      "can parents attend workshops",
+      "can teachers attend workshops",
+      "are parents allowed in workshops",
+      "are teachers allowed in workshops",
+      "parents and teachers participation"
+    ],
+    "regex": "\\b(workshop|session)\\b.*\\b(parents?|teachers?|allowed|attend|participate|join)\\b",
+    "response": "Yes, parents and teachers can also attend the online workshops alongside students. The workshops are open to anyone interested in the topics covered."
+  },
+  {
+    "intent": "workshop_fee_required",
+    "patterns": [
+      "do we need to pay for workshops",
+      "is there a fee for workshops",
+      "workshop charges",
+      "workshop cost",
+      "are workshops free"
+    ],
+    "regex": "\\b(workshop|session)\\b.*\\b(fee|fees|pay|cost|charges?|free)\\b",
+    "response": "No, there is no fee required to attend the online workshops conducted by KAMP. They are accessible free of charge to students, parents, and teachers who wish to participate and benefit from the sessions."
+  },
+  {
+    "intent": "access_previous_workshop_recordings",
+    "patterns": [
+      "how can i watch previous workshops",
+      "how to see past workshop recordings",
+      "where are old workshop videos",
+      "how to access workshop recordings",
+      "previous workshop sessions"
+    ],
+    "regex": "\\b(previous|past|old)\\b.*\\b(workshop|session|recording|video)\\b",
+    "response": "All the recordings of previous workshops are available under the student and school login portals. You can access them using your KAMP enrolment number and date of birth. This allows you to revisit or catch up on past sessions at your convenience."
+  },
+  {
+    "intent": "difference_between_CPD_and_teacher_training",
+    "patterns": [
+      "difference between cpd and teacher training",
+      "what is cpd in kamp",
+      "is cpd same as teacher training",
+      "cpd vs teacher training",
+      "teacher training and cpd difference"
+    ],
+    "regex": "\\b(CPD)\\b.*\\b(teacher training)\\b|\\b(teacher training)\\b.*\\b(CPD)\\b",
+    "response": "There is no difference between CPD (Continuous Professional Development) and the teacher training program organized by KAMP. Both terminologies refer to programs designed to enhance the professional skills, knowledge, and effectiveness of teachers. These programs aim to provide ongoing learning opportunities that contribute to the continuous improvement of teaching practices and educational outcomes."
+  },
+  {
+    "intent": "how_to_participate_in_CPD",
+    "patterns": [
+      "how to participate in cpd",
+      "register for cpd program",
+      "join cpd training",
+      "enroll in cpd",
+      "sign up for cpd",
+      "cpd nomination process"
+    ],
+    "regex": "\\b(CPD)\\b.*\\b(participate|join|register|enroll|nominate)\\b",
+    "response": "If school teachers wish to participate in upcoming CPD programs organized by KAMP, they can nominate their teachers for the CPD program by contacting us at:\nEmail: coe@kamp.org.in\nPhone: (+91) 9599576228, (+91) 9289359694\nWhatsapp: (+91) 9717435123"
+  },
+  {
+    "intent": "cpd_certificate_delivery",
+    "patterns": [
+      "how will i receive my cpd certificate",
+      "how to get cpd participation certificate",
+      "when will i get my cpd e certificate",
+      "cpd program certificate delivery",
+      "receive cpd program certificate",
+      "certificate for cpd training"
+    ],
+    "regex": "\\b(CPD)\\b.*\\b(certificate|e-?certificate|participation)\\b",
+    "response": "The e-participation certificate for the CPD program will be sent to the registered email ID provided during your participation. Make sure to provide a valid and accurate email address to ensure timely receipt of your certificate. If you have any questions or concerns regarding the certificate, you can contact the KAMP support team for assistance."
+  },
+  {
+    "intent": "cpd_travel_expenses",
+    "patterns": [
+      "who will cover travel expenses for cpd",
+      "cpd program travel cost",
+      "cpd travel expenses covered by kamp",
+      "who pays for cpd travel",
+      "travel charges for cpd program",
+      "is cpd travel free"
+    ],
+    "regex": "\\b(CPD)\\b.*\\b(travel|expenses|charges|cost)\\b",
+    "response": "The traveling expenses for the CPD program will be covered by the participating teacher or school. KAMP does not sponsor any financial support or reimbursements for traveling charges incurred by teachers attending CPD programs. Therefore, it is the responsibility of the teacher or the school to manage and cover these expenses accordingly."
+  },
+  {
+    "intent": "cpd_online_attendance",
+    "patterns": [
+      "can we attend cpd program online",
+      "cpd program online option",
+      "attend cpd from home",
+      "cpd remote participation",
+      "is cpd available online",
+      "how to join cpd online"
+    ],
+    "regex": "\\b(CPD)\\b.*\\b(online|remote|home|virtual)\\b",
+    "response": "The schedule of online CPD programs are available under CPD page or the school logins. Consequently, KAMP will send the invitation on registered mobile number to all the registered schools under KAMP through WhatsApp and email."
+  },
+  {
+    "intent": "scientific_excursion_eligibility",
+    "patterns": [
+      "who can participate in scientific excursions",
+      "scientific excursions eligibility",
+      "who is eligible for scientific trips",
+      "can all students join scientific excursions",
+      "nasta achievers scientific trip"
+    ],
+    "regex": "\\b(scientific|science)\\b.*\\b(excursion|trip|visit)\\b.*\\b(eligible|participate|join)\\b",
+    "response": "KAMP is providing an opportunity for all registered students to participate in upcoming scientific excursions. However, all NASTA achievers are eligible to participate in these excursions."
+  },
+  {
+    "intent": "scientific_excursion_participation",
+    "patterns": [
+      "how to participate in scientific excursions",
+      "scientific excursions registration",
+      "join a scientific trip",
+      "how can i go on a scientific excursion",
+      "how do i apply for a science trip"
+    ],
+    "regex": "\\b(scientific|science)\\b.*\\b(excursion|trip|visit)\\b.*\\b(participate|register|apply|join)\\b",
+    "response": "If you wish to participate in any upcoming excursion, please follow these steps:\nContact your school teacher (KAMP Nodal Officer) or Principal:\n  Inform your teacher of your interest in participating in a scientific excursion\n  Your teacher will then nominate you for the excursion. Your school will need to reach out to us at the below email or phone to complete the nomination process.\n  Email: coe@kamp.org.in\n  Phone: (+91) 9599576228, (+91) 9289359694\n  Whatsapp: (+91) 9717435123\nPlease Note: Participation will be confirmed based on seat availability."
+  },
+  {
+    "intent": "science_excursion_eligibility_and_fee",
+    "patterns": [
+      "can all students attend the science excursion",
+      "is the science excursion free",
+      "who can join the school science trip",
+      "eligibility for scientific excursions",
+      "cost of science excursion"
+    ],
+    "regex": "\\b(scientific|science)\\b.*\\b(excursion|trip|visit)\\b.*\\b(free|cost|eligible|eligibility|attend|join)\\b",
+    "response": "KAMP provides opportunities for scientific excursions to all students of the school from classes 3rd - 12th. However, only the National and State Achievers are eligible for one sponsored excursion within an academic session. Generally, scientific excursions are self-sponsored, and schools/parents need to cover all the traveling/accommodation expenses."
+  },
+  {
+    "intent": "scientific_excursion_general_guidelines",
+    "patterns": [
+      "what are the guidelines for scientific excursions",
+      "rules for science excursion",
+      "general instructions for kamp excursions",
+      "how to prepare for the school science trip",
+      "scientific excursion safety protocols"
+    ],
+    "regex": "\\b(scientific|science)\\b.*\\b(excursion|trip|visit)\\b.*\\b(guidelines|rules|instructions|protocols)\\b",
+    "response": "The general guidelines to be followed during Scientific Excursions are as follows:\n\nEligibility Criteria: Students enrolled in KAMP – NASTA are eligible to participate in the Scientific Excursions.\nNomination Process: The nominations for the excursions will be done by the participating schools only. Schools are responsible for nominating interested students from their school/institution for the excursions.\nNomination Procedure: Schools can nominate the details of the interested students through the school login panel under the Excursions section.\nContact for Nomination: Students interested in participating in the Scientific Excursions should get in touch with their respective school teacher or KAMP-Nodal Officer to express their interest and get nominated.\nTravel and Logistics: Travel and logistics will be self-sponsored by the respective school/parent.\nSafety Protocols: For the safety of students during the Scientific Excursions, the following safety protocols will be strictly adhered to:\n- The KAMP-nodal officer or at least one teacher from the participating school will accompany the students throughout the entire duration of the excursion.\n- Participants will be asked to provide any relevant medical information or special health considerations.\n- Parents or guardians must provide written consent prior to participation.\n- All participating students must bring a valid Photo I.D. for attendance and entry.\nDisclaimer: The Scientific Excursion organized by KAMP is exclusively for participants of KAMP – NASTA, and there is no additional fee imposed by KAMP or the prestigious labs/research organizations involved. KAMP does not authorize any party to collect fees for participation. Any updates will be communicated only through official KAMP channels and website."
+  },
+  {
+    "intent": "scientific_excursion_achiever_participation",
+    "patterns": [
+      "i am a national achiever how can i join the scientific excursion",
+      "state achiever excursion participation process",
+      "sponsored science trip for nasta achievers",
+      "how do achievers join the science excursion",
+      "process for achievers to attend excursion"
+    ],
+    "regex": "\\b(achiever|winner)\\b.*\\b(scientific|science)\\b.*\\b(excursion|trip|visit)\\b",
+    "response": "Yes, you are eligible for one scientific excursion in an academic session. For the planned sponsored Scientific Excursion for the NASTA achievers, details will be communicated directly to the School KAMP Nodal Officer or Principal via phone call, email, and WhatsApp. It is essential that schools promptly relay this information to parents or guardians of participating students.\n\nSchools are required to collect written consent from parents or guardians regarding their child's participation in the upcoming excursion.\n\nThis process ensures transparency and clear communication, allowing for informed decisions by parents and guardians regarding student participation in these enriching Scientific Excursions organized by KAMP."
+  },
+  {
+    "intent": "about_kamp",
+    "patterns": [
+      "tell me about kamp",
+      "what is kamp",
+      "give details about kamp",
+      "explain kamp",
+      "kamp information",
+      "kamp"
+    ],
+    "regex": "\\b(kamp)\\b.*(about|details|information|explain|what)",
+    "response": "Knowledge and Awareness Mapping Platform (KAMP) is an initiative and knowledge alliance of the Council of Scientific and Industrial Research (CSIR) – National Institute of Science Communication and Policy Research (NIScPR), under the Department of Science & Technology, Government of India. The objective of KAMP is to identify and assess scientific temper, knowledge, and skills among students, and nurture their talents through various initiatives such as the National Assessment for Scientific Temperament & Aptitude (NASTA), workshops, training programs, and scientific excursions.\n\nKAMP aims to create a platform for mapping and enhancing scientific skills, analytical thinking, and awareness among students, encouraging innovation, creativity, and problem-solving abilities in alignment with the New Education Policy 2020."
+  },
+  {
+    "intent": "about_nasta",
+    "patterns": [
+      "tell me about nasta",
+      "what is nasta",
+      "explain nasta",
+      "give details about nasta",
+      "nasta information"
+    ],
+    "regex": "\\b(nasta)\\b.*(about|details|information|explain|what)",
+    "response": "NASTA stands for National Assessment for Scientific Temperament & Aptitude. It is an initiative under the Knowledge and Awareness Mapping Platform (KAMP), developed by CSIR–NIScPR under the Department of Science & Technology, Government of India.\n\nThe objective of NASTA is to evaluate the scientific temperament, analytical thinking, and problem-solving skills of students from classes 3rd to 12th across India and abroad. The assessment is based on the current curriculum, encouraging students to think critically and apply their knowledge.\n\nNASTA also helps schools and parents identify students' strengths and areas for improvement through detailed reports. Achievers are recognized at state and national levels and get opportunities to participate in scientific workshops, excursions, and further skill development programs."
+  },
+  {
+    "intent": "about_coe",
+    "patterns": [
+      "what is coe",
+      "tell me about coe",
+      "explain coe",
+      "coe meaning",
+      "what does coe mean in kamp"
+    ],
+    "regex": "\\b(coe|centre of excellence)\\b.*(what|about|meaning|explain|details)",
+    "response": "COE stands for Centre of Excellence under the KAMP initiative. It is a special program designed for schools to enhance STEM education by providing infrastructure and resources for advanced learning.\n\nSchools nominated as COE get access to:\n  - AI & Robotics Lab setup (as per eligibility and requirements)\n  - Fortnightly Online Workshops\n  - Scientific Excursions to prestigious institutions like CSIR labs and ISRO\n  - Continuous Professional Development (CPD) programs for teachers\n  - National-level competitions and challenges\n  - Knowledge resources from CSIR–NIScPR\n\nThe COE aims to foster innovation, analytical thinking, and hands-on learning, aligning with the New Education Policy 2022 to prepare students with future-ready skills."
+  },
+  {
+    "intent": "about_cpd",
+    "patterns": [
+      "what is cpd",
+      "tell me about cpd",
+      "explain cpd",
+      "cpd meaning",
+      "what does cpd stand for in kamp"
+    ],
+    "regex": "\\b(cpd|continuous professional development)\\b.*(what|about|meaning|explain|details)",
+    "response": "CPD stands for Continuous Professional Development. In KAMP, it refers to teacher training programs aimed at enhancing professional skills, knowledge, and teaching effectiveness.\n\nCPD programs organized by KAMP include:\n  - Training sessions on modern teaching methodologies\n  - Exposure to the latest trends in STEM education\n  - Hands-on sessions for AI, Robotics, and Innovation\n  - Workshops with industry experts and scientists\n\nThe goal of CPD is to provide ongoing learning opportunities for teachers so they can improve their instructional methods and better support student learning outcomes."
+  },
+  {
+    "intent": "important_dates",
+    "patterns": [
+      "what are the important dates",
+      "important dates in kamp",
+      "tell me the key dates",
+      "what is the schedule",
+      "timeline for kamp events"
+    ],
+    "regex": "\\b(important|key) dates\\b|\\bschedule\\b|\\btimeline\\b",
+    "response": "The important dates for KAMP events are published on the KAMP website under the 'Important Dates' section. These include:\n  - School Registration Start Date\n  - Student Registration Start Date\n  - Last Date for Registration\n  - Mock Test Availability Date\n  - NASTA Assessment Date\n  - Result Declaration Date\n  - Dates for Workshops, CPD Programs, and Scientific Excursions\n\nPlease visit https://kamp.org.in/important-dates for the latest and most accurate schedule, as these dates are updated regularly."
+  },
+  {
+    "intent": "check_results",
+    "patterns": [
+      "how can i check the results",
+      "where can i see my results",
+      "how to view nasta results",
+      "check my score",
+      "how do i get my results"
+    ],
+    "regex": "\\b(check|view|get|see) (my )?(results?|score)\\b",
+    "response": "You can check your NASTA results through the student and school login portals:\n\nFor Students:\n  - Go to https://kamp.org.in/student-registration-and-login\n  - Log in with your enrollment number and date of birth (DOB).\n\nFor Schools:\n  - Go to https://kamp.org.in/school-registration-and-login/cbse\n  - Log in with your User ID and Password.\n\nAdditionally, achievers' lists are available on the KAMP website under the 'Results' section on the homepage."
+  },
+  {
+    "intent": "important_links",
+    "patterns": [
+      "where can i see the important links",
+      "show me important links",
+      "where are the important links",
+      "list important links",
+      "how to access important links"
+    ],
+    "regex": "\\b(important links?)\\b",
+    "response": "You can access all important links on the KAMP website. Visit https://kamp.org.in and scroll down to the 'Important Links' section on the homepage. This section provides direct access to various resources including registration pages, syllabus, sample papers, and other useful information."
+  },
+  {
+    "intent": "enrollment_fee",
+    "patterns": [
+      "what would be the enrollment fee",
+      "what is the enrollment fee",
+      "tell me the enrollment fee",
+      "how much is the enrollment fee",
+      "enrollment charges",
+      "fee for enrollment",
+      "what is the registration fee"
+    ],
+    "regex": "\\b(enrollment fee|registration fee|enrollment charges?)\\b",
+    "response": "The enrollment fee for KAMP is Rs. 400/- per student. This applies to students from self-financed schools, Kendriya Vidyalayas, and Jawahar Navodaya Vidyalayas."
+  },
+  {
+    "intent": "download_awards_certificates",
+    "patterns": [
+      "how can i download the awards and certificates of participation",
+      "where can i get my award certificate",
+      "download my participation certificate",
+      "how to get award and certificate",
+      "how to download my award",
+      "how to download my certificate of participation",
+      "participation certificate download link",
+      "award certificate download link"
+    ],
+    "regex": "\\b(download.*(certificate|award)|participation certificate|award certificate)\\b",
+    "response": "You can download awards and participation certificates through the school or student login portal on the KAMP website. Log in using your credentials (Enrollment Number and Date of Birth for students, or User ID and Password for schools), and navigate to the 'Certificates' section to download them."
+  },
+  {
+    "intent": "activities_under_kamp",
+    "patterns": [
+      "what are the activities under kamp",
+      "kamp activities",
+      "list activities of kamp",
+      "what does kamp do",
+      "kamp programs"
+    ],
+    "regex": "\\b(kamp)\\b.*\\b(activities|programs|what does|list)\\b",
+    "response": "KAMP organizes a variety of activities aimed at nurturing scientific temperament, analytical skills, and innovation among students. The key activities include:\n- NASTA Assessment\n- Online Fortnightly Workshops\n- Scientific Excursions (e.g., ISRO and CSIR labs)\n- Centre of Excellence (CoE) Program (AI & Robotics Lab, competitions, CPD)\n- Annual Award Ceremony – Pratibhaotsav\n- Competitions and Challenges (national and international)\n- Learning Environment Survey (LES)\nThese activities provide students with practical learning, research exposure, and innovation opportunities beyond the regular curriculum."
+  },
+  {
+    "intent": "main_motive_of_kamp",
+    "patterns": [
+      "what is the main motive of kamp",
+      "kamp objective",
+      "kamp goal",
+      "kamp mission",
+      "purpose of kamp"
+    ],
+    "regex": "\\b(kamp)\\b.*\\b(motive|objective|goal|mission|purpose)\\b",
+    "response": "The main motive of KAMP (Knowledge and Awareness Mapping Platform) is to identify and nurture the scientific temper, creativity, and analytical skills of students from an early age. KAMP aims to map and enhance students’ knowledge, awareness, and aptitude in science and technology, thereby preparing them for future challenges. It also supports policymakers and educators by providing insights through research and assessments, fostering innovation, and promoting a culture of scientific thinking."
+  },
+  {
+    "intent": "greeting",
+    "patterns": [
+      "hi",
+      "hello",
+      "hey",
+      "good morning",
+      "good afternoon",
+      "good evening"
+    ],
+    "regex": "^(hi|hello|hey)\\b|^(good\\s)?(morning|afternoon|evening)\\b",
+    "response": "Hello! How can I help you today?"
+  },
+  {
+    "intent": "how_are_you",
+    "patterns": [
+      "how are you",
+      "how are you doing",
+      "how's everything",
+      "what's up"
+    ],
+    "regex": "how(\\s+are\\s+you|\\s+are\\s+ya)|how'?s\\s+(it\\s+going|everything)|what'?s\\s+up",
+    "response": "I’m doing great, thanks for asking! How can I help you today?"
+  },
+  {
+    "intent": "please_help",
+    "patterns": [
+      "please help me",
+      "help",
+      "can you help me",
+      "i need help"
+    ],
+    "regex": "help(\\s+me)?|can\\s+you\\s+help(\\s+me)?|i\\s+need\\s+help",
+    "response": "Of course! Tell me what you need help with."
+  },
+  {
+    "intent": "goodbye",
+    "patterns": [
+      "bye",
+      "goodbye",
+      "see you",
+      "take care",
+      "see you later"
+    ],
+    "regex": "bye(\\s+bye)?|good\\s*bye|see\\s+you(\\s+later)?|take\\s+care",
+    "response": "Goodbye! Have a great day!"
+  },
+  {
+    "intent": "thanks",
+    "patterns": [
+      "thanks",
+      "thank you",
+      "thanks a lot",
+      "much appreciated"
+    ],
+    "regex": "thank(s|\\s+you)|much\\s+appreciated",
+    "response": "You’re welcome!"
+  }
+]
