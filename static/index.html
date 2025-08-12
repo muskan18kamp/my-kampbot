@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kampbot</title>
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --accent:#2563eb;
+      --bot:#e5e5e5;    /* grey for bot */
+      --user:#cceeff;   /* light blue for user */
+      --radius:16px;
+      --shadow:0 6px 20px rgba(0,0,0,.06);
+      --fs-xxs:12px;
+      --fs-xs:13px;
+      --fs-sm:14px;
+      --lh:1.65;
+      --gap:10px;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial;
+      font-size: var(--fs-xs);
+      line-height: var(--lh);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .wrap{
+      max-width: 440px;
+      margin: 24px auto;
+      padding: 0 12px;
+    }
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .header{
+      padding: 10px 14px;
+      border-bottom: 1px solid #eef2f7;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.12);}
+    .title{font-weight:600;font-size: var(--fs-sm);}
+    .sub{color:var(--muted);font-size: var(--fs-xxs);margin-left:auto}
+    .controls{display:flex; gap:6px; margin-left:8px;}
+    .ctrl-btn{
+      border:1px solid #e5e7eb; background:#fff; color:#374151;
+      padding:6px 8px; border-radius:8px; font-size:12px; cursor:pointer;
+    }
+    .ctrl-btn.active{background:#e0e7ff; border-color:#c7d2fe;}
+
+    .chat{
+      padding: 14px;
+      height: 64vh;
+      overflow-y: auto;
+      background: linear-gradient(180deg, #fafbff 0%, #fff 100%);
+      scroll-behavior: smooth;
+      display: flex;
+      flex-direction: column;
+    }
+    .chat a{ color:#1d4ed8; text-decoration: underline; word-break: break-all; }
+
+    .msg{
+      max-width: 72%;
+      margin: 6px 0;
+      padding: 10px 12px;
+      border-radius: 12px;
+      word-break: break-word;
+      white-space: pre-wrap;
+      text-align: justify;
+      text-justify: inter-word;
+      letter-spacing: .1px;
+      box-shadow: 0 1px 6px rgba(0,0,0,.04);
+    }
+    .msg p{margin:0 0 8px 0;}
+    .msg p:last-child{margin:0;}
+    .bot{
+      align-self: flex-start;
+      background: var(--bot);
+      border: 1px solid #d1d5db;
+      color: #000;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 12px;
+    }
+    .user{
+      align-self: flex-end;
+      background: var(--user);
+      border: 1px solid #b3e0f2;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 12px;
+    }
+    .msg hr{
+      border:0; border-top:1px dashed #e5e7eb; margin: 8px 0;
+    }
+    .msg ul, .msg ol{margin: 6px 0 6px 20px;}
+    .msg li{margin: 2px 0;}
+
+    .input{
+      display:flex; gap:8px; padding: 10px; border-top:1px solid #eef2f7; background:#fff;
+    }
+    input[type="text"]{
+      flex:1;
+      font-size: var(--fs-xs);
+      padding: 10px 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      outline: none;
+      transition: border .2s, box-shadow .2s;
+    }
+    input[type="text"]::placeholder{color:#9ca3af;}
+    input[type="text"]:focus{border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,.12);}
+    button{
+      font-size: var(--fs-xs);
+      padding: 10px 12px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(37,99,235,.25);
+    }
+    button:disabled{opacity:.6;cursor:not-allowed;box-shadow:none;}
+    .mic{
+      background:#10b981; /* green */
+    }
+    .mic.recording{
+      background:#ef4444; /* red */
+    }
+
+    .hint{margin-top:8px;color:var(--muted);font-size:var(--fs-xxs);text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="header">
+        <span class="dot"></span>
+        <div class="title">Kampbot</div>
+        <div class="sub">KAMP Assistant</div>
+        <div class="controls">
+          <button id="ttsToggle" class="ctrl-btn" title="Toggle voice (read bot replies)">🔊 Voice</button>
+        </div>
+      </div>
+
+      <div id="chat" class="chat"></div>
+
+      <div class="input">
+        <input id="msg" type="text" placeholder="Type your msg…" />
+        <button id="micBtn" class="mic" title="Speak your message">🎤</button>
+        <button id="send">Send</button>
+      </div>
+    </div>
+    <div class="hint">Tip: Click links to open. Use 🎤 to speak, 🔊 to hear replies.</div>
+  </div>
+
+  <script>
+    const chat = document.getElementById('chat');
+    const input = document.getElementById('msg');
+    const sendBtn = document.getElementById('send');
+    const micBtn = document.getElementById('micBtn');
+    const ttsToggle = document.getElementById('ttsToggle');
+
+    let ttsOn = false;
+    let recognizing = false;
+    let recognition = null;
+
+    // --- URL LINKIFIER (safe) ---
+    // Escape HTML then convert URLs to anchors. Keeps white-space via CSS.
+    function escapeHtml(str){
+      return str.replace(/[&<>"']/g, s => ({
+        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+      })[s]);
+    }
+    function linkify(text){
+      const escaped = escapeHtml(text);
+      const urlRegex = /((https?:\/\/|www\.)[^\s<]+)/gi;
+      return escaped.replace(urlRegex, (match) => {
+        const url = match.startsWith('http') ? match : `http://${match}`;
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">${match}</a>`;
+      });
+    }
+
+    function addMsg(text, who='bot'){
+      const div = document.createElement('div');
+      div.className = `msg ${who}`; // 'bot' (left) or 'user' (right)
+
+      // For bot messages, linkify; for user we keep plain (or linkify both if you want)
+      if(who === 'bot'){
+        div.innerHTML = linkify(text);
+      }else{
+        // If you also want user links clickable, use linkify(text) here too.
+        div.textContent = text;
+      }
+
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+
+      // Text-to-Speech for bot replies
+      if (who === 'bot' && ttsOn && 'speechSynthesis' in window) {
+        const utter = new SpeechSynthesisUtterance(div.textContent);
+        utter.rate = 1.0;   // speed
+        utter.pitch = 1.0;  // tone
+        utter.lang = 'en-IN'; // adjust if you want Hindi 'hi-IN'
+        window.speechSynthesis.cancel(); // stop any current speech
+        window.speechSynthesis.speak(utter);
+      }
+    }
+
+    async function send(){
+      const text = input.value.trim();
+      if(!text) return;
+      addMsg(text, 'user');     // user bubble on RIGHT
+      input.value = '';
+      sendBtn.disabled = true;
+
+      try{
+        const res = await fetch('/chat', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({message: text})
+        });
+        const data = await res.json();
+        addMsg(data.response || '…', 'bot'); // bot bubble on LEFT
+      }catch(e){
+        addMsg('Bot: Error: Could not reach server.', 'bot');
+      }finally{
+        sendBtn.disabled = false;
+      }
+    }
+
+    sendBtn.addEventListener('click', send);
+    input.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' && !e.shiftKey){
+        e.preventDefault();
+        send();
+      }
+    });
+
+    // --- TTS toggle ---
+    ttsToggle.addEventListener('click', ()=>{
+      ttsOn = !ttsOn;
+      ttsToggle.classList.toggle('active', ttsOn);
+      ttsToggle.textContent = ttsOn ? '🔊 Voice On' : '🔊 Voice';
+      if(!ttsOn && 'speechSynthesis' in window){
+        window.speechSynthesis.cancel();
+      }
+    });
+
+    // --- Speech Recognition (Web Speech API) ---
+    function setupRecognition(){
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if(!SR) return null;
+      const rec = new SR();
+      rec.lang = 'en-IN';       // change to 'hi-IN' for Hindi
+      rec.interimResults = false;
+      rec.maxAlternatives = 1;
+
+      rec.onstart = ()=>{ recognizing = true; micBtn.classList.add('recording'); micBtn.textContent = '🛑'; };
+      rec.onend   = ()=>{ recognizing = false; micBtn.classList.remove('recording'); micBtn.textContent = '🎤'; };
+      rec.onerror = (e)=>{ recognizing = false; micBtn.classList.remove('recording'); micBtn.textContent = '🎤'; };
+
+      rec.onresult = (e)=>{
+        const transcript = (e.results[0] && e.results[0][0]) ? e.results[0][0].transcript : '';
+        if(transcript){
+          input.value = transcript;
+          send(); // auto-send after capture
+        }
+      };
+      return rec;
+    }
+
+    if('webkitSpeechRecognition' in window || 'SpeechRecognition' in window){
+      recognition = setupRecognition();
+      micBtn.addEventListener('click', ()=>{
+        if(!recognition) return;
+        if(recognizing){
+          recognition.stop();
+        }else{
+          try { recognition.start(); } catch(_){}
+        }
+      });
+    }else{
+      // Hide mic if not supported
+      micBtn.style.display = 'none';
+    }
+
+    // Welcome on load
+    window.addEventListener('load', ()=>{
+      addMsg("Hi! I'm Kampbot. I'm here to help you. You can ask me anything regarding the KAMP website.\n\nWebsite link: https://kamp.org.in", 'bot');
+      input.focus();
+    });
+  </script>
+</body>
+</html>
