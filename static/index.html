@@ -103,7 +103,7 @@
       background: white;
       color: #007bff;
       border: 1px solid #d1d5db;
-      border-radius: 8px;
+      border-radius: 12px;
       padding: 6px 10px;
       cursor: pointer;
       font-family: 'Calibri', sans-serif;
@@ -294,7 +294,7 @@
       background: var(--bot);
       border: 1px solid #d1d5db;
       color: #000;
-      font-size: 12px;
+      font-size: 13px;
       border-radius: 16px;
     }
     .user{
@@ -302,7 +302,7 @@
       text-align: justify;
       background: var(--user);
       border: 1px solid #b3e0f2;
-      font-size: 12px;
+      font-size: 13.5px;
       border-radius: 16px;
     }
     .msg hr{
@@ -658,7 +658,10 @@
   chat.appendChild(whatsappMsg);
   loadCategories();
 
-  chat.scrollTop = chat.scrollHeight;
+  // ✅ Scroll sirf user/bot answer tak, bottom tak nahi
+  if (who === 'bot') {
+    div.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
 }
 
@@ -741,7 +744,11 @@
       }
 
       chat.appendChild(div);
-      chat.scrollTop = chat.scrollHeight;
+
+      // ✅ Scroll sirf user/bot answer tak, bottom tak nahi
+      if (who === 'bot') {
+        div.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
 
       // Text-to-Speech for bot replies
       if (who === 'bot' && ttsOn && 'speechSynthesis' in window) {
@@ -804,9 +811,6 @@
         `;
         chat.appendChild(whatsappMsg);
         loadCategories();
-
-        chat.scrollTop = chat.scrollHeight;
-     
     
       }catch(e){
         addMsg('Bot: Error: Could not reach server.', 'bot');
@@ -939,6 +943,7 @@
   
 </body>
 </html>
+
 
 
 
